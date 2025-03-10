@@ -2,10 +2,10 @@
     
 
     try{
-    $host = "localhost";
-    $dbname = "jobportal";
-    $user = "root";
-    $pass = "123456";
+    $host = getenv("mysql.railway.internal");
+    $dbname = getenv("railway");
+    $user =  getenv("root");
+    $pass = getenv("SoZqIcQPaFNoqilbYlqBIRXNGvRbSyiQ");
 
     $conn = new PDO("mysql:host=$host;dbname=$dbname",$user, $pass);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
